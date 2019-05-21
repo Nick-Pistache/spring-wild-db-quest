@@ -28,4 +28,9 @@ public class SchoolController {
         );
         return SchoolRepository.selectById(idGeneratedByInsertion);
     }
+
+    @DeleteMapping("/api/schools/{id}")
+    public void delete(@PathVariable int id) {
+        SchoolRepository.delete(id);
+    }
 }
